@@ -33,7 +33,9 @@ class MySQL {
                 return console.log(err);
             }
 
-            callback(rowCreated)
+            if(rowCreated) {
+                callback(rowCreated)
+            }
 
         })
     }

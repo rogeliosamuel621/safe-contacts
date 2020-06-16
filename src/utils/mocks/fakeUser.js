@@ -1,0 +1,31 @@
+[{
+    "name": "Vanya",
+    "lastName": "Bertouloume",
+    "email": "vbertouloume0@squarespace.com",
+    "username": "vbertouloume0",
+    "password": "OA1xIE"
+  }, {
+    "name": "Olly",
+    "lastName": "Frickey",
+    "email": "ofrickey1@statcounter.com",
+    "username": "ofrickey1",
+    "password": "QwpSJP3EKTI2"
+  }, {
+    "name": "Rosemonde",
+    "lastName": "Kingsnorth",
+    "email": "rkingsnorth2@economist.com",
+    "username": "rkingsnorth2",
+    "password": "zyT6Tj0z15C"
+  }, {
+    "name": "Taddeusz",
+    "lastName": "Blackmore",
+    "email": "tblackmore3@gravatar.com",
+    "username": "tblackmore3",
+    "password": "8lkW0Q4Fa"
+  }, {
+    "name": "Junina",
+    "lastName": "Sorby",
+    "email": "jsorby4@qq.com",
+    "username": "jsorby4",
+    "password": "lPwcCrNy"
+  }]

@@ -27,14 +27,14 @@ class MySQL {
     }
 
     Create(table, data, callback) {
+
         pool.query(`INSERT INTO ${table} SET ?`, [data], (err, rowCreated) => {
             if(err){
                 return console.log(err);
             }
 
-            if(rowCreated) {
-                callback(rowCreated)
-            }
+            callback(rowCreated)
+
         })
     }
 

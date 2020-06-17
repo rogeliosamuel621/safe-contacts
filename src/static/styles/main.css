@@ -84,3 +84,45 @@ nav{
     transition: 0.5s;
     box-shadow: 0 0 20px 0 #0779E4;
 }
+
+/* Footer */
+footer{
+    padding: 20px;
+    background-color: #204051;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.brands{
+    display: flex;
+    justify-content: space-around;
+}
+.About-us div{
+    display: grid;
+    justify-items: center;
+}
+.Recomend{
+    display: grid;
+    justify-items: center;
+}
+form{
+    display: grid;
+    grid-template-columns: 130px auto;
+    grid-template-rows: auto 60px;
+}
+textarea{
+    outline: none;
+    border: 1px solid black;
+    grid-column: 1 / 3;
+    resize: none;
+}
+textarea:focus{
+    border: 1px solid #0779E4;
+    box-shadow: 0 0 5px 0 #0779E4;
+}
+input{
+    background-color: #C4C4C4;
+    border: none;
+    margin-top: 20px;
+    grid-column: 1 / 2;
+}

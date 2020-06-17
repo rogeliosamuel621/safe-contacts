@@ -1,0 +1,86 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: grid;
+    grid-template-rows: auto 583px;
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.Logo h1{
+    font-family: 'Merienda One', cursive;
+}
+.Navigate{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+.Links{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Links a{
+    transition: 0.1s;
+    margin-top: 16px;
+    text-decoration: none;
+    color: white;
+}
+.Links a:hover{
+    transition: 0.1s;
+    border-bottom: 2px solid white;
+}
+.LogIn{
+    margin-top: 16px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.LogIn a{
+    height: 35%;
+    text-decoration: none;
+    color: white;
+}
+.LogIn a:hover{
+    transition: 0.1s;
+    border-bottom: 2px solid white;
+}
+
+.Hero{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto 600px;
+}
+.Eslogan{
+    display: grid;
+    grid-template-rows: 150px 50px 50px;
+}
+.Eslogan div h2{
+    font-size: 50px;
+}
+.Eslogan div p{
+    font-size: 20px;
+}
+.Eslogan div a{
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    padding: 10px 30px 10px 30px;
+    border: 2px solid #0779E4;
+    background-color: #0779E4;
+    border-radius: 40px;
+}
+.Eslogan div a:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 20px 0 #0779E4;
+}

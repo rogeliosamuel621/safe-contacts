@@ -11,11 +11,11 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 //MIDDLEWARES
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));//To read form information
 
 //ROUTES
-const userRoutes = require('./routes/main');
-app.use('/', userRoutes)
+const mainRoutes = require('./routes/main');
+app.use('/', mainRoutes);
 
 //SERVER
 app.listen(port, (req, res) => {

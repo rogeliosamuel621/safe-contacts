@@ -9,10 +9,10 @@ router.get('/', (req, res) => {
 
 router.get('/signUp', (req, res) => {
     res.render('signUp');
-})
+});
 
 router.post('/signUp', (req, res) => {
-    console.log(req.body)
+    
     const newUser = req.body;
 
     userService.Register(newUser, (userCreated) => {
@@ -23,7 +23,11 @@ router.post('/signUp', (req, res) => {
     });
 });
 
-router.post('/logIn', (req, res) => {
+router.get('/signIn', (req, res) => {
+    res.render('signIn')
+});
+
+router.post('/signIn', (req, res) => {
     const user = req.body;
 
     userService.LogIn(user, (token, message) => {

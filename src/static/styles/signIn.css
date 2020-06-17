@@ -1,0 +1,58 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: grid;
+    justify-items: center;
+}
+.Container-father{
+    display: grid;
+    border: 1px solid black;
+    width: 40%;
+}
+form{
+    display: grid;
+    justify-items: center;
+}
+.label{
+    margin-top: 20px;
+    width: 60%;
+    text-align: start;
+}
+.input{
+    width: 60%;
+}
+.input input{
+    border-radius: 3px;
+    border: 1px solid gray;
+    outline: none;
+    width: 90%;
+    height: 25px;
+}
+.input input:focus{
+    border: 1px solid #0779E4;
+    box-shadow: 0 0 2px 0 #0779E4;
+}
+.btn-container{
+    margin-top: 30px;
+    width: 60%;
+}
+.btn-container input{
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #0779E4;
+    background-color: #0779E4;
+    height: 30px;
+    outline: none;
+    width: 93%;
+}
+.Policy{
+    display: grid;
+    justify-items: center;
+}
+.Policy div{
+    width: 50%;
+}

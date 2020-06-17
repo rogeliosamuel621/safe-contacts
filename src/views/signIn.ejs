@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/signIn.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <a href="/" style="text-decoration: none; color: black;"><h1 style="font-family: 'Merienda One', cursive;">Safe contacts</h1></a>
+        <div class="Container-father">
+            <div>
+                <h2 style="margin-left: 30px; font-weight: 400;">Create an account</h2>
+            </div>
+            <div class="formContainer">
+                <form action="/signIn" method="POST">
+                    <div class="label">
+                        <label for="name">Email</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" name="email" type="text">
+                    </div>
+                    <div class="label">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" name="password" type="password">
+                    </div>
+                    <div class="btn-container">
+                        <input type="submit" value="Sign in">
+                    </div>
+                </form>
+            </div>
+            <div class="Policy">
+                <div>
+                    <p style="font-size: 15px;">By creating an account you agree with save contacts’ conditions of use and privacy notice </p>
+                </div>
+                <div style="width: 80%;">
+                    <hr >
+                </div>
+                <div>
+                    <p>New at safe contact? <a href="/signUp">sign-Up</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

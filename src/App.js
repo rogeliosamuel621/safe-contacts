@@ -1,6 +1,5 @@
 const express = require('express');
-const path = require('path')
-const exhbs = require('express-handlebars');
+const path = require('path');
 const { port } = require('./config');
 
 const app = express();
@@ -12,6 +11,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 //MIDDLEWARES
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 //ROUTES
 const userRoutes = require('./routes/main');

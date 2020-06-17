@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/signUp.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <a href="/" style="text-decoration: none; color: black;"><h1 style="font-family: 'Merienda One', cursive;">Safe contacts</h1></a>
+        <div class="Container-father">
+            <div>
+                <h2 style="margin-left: 30px; font-weight: 400;">Create an account</h2>
+            </div>
+            <div class="formContainer">
+                <form action="/signUp" method="POST">
+                    <div class="label">
+                        <label for="name">First name</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" name="name" type="text">
+                    </div>
+                    <div class="label">
+                        <label for="">Last name</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" name="lastName" type="text">
+                    </div>
+                    <div class="label">
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" name="email" type="text">
+                    </div>
+                    <div class="label">
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" name="username" type="text">
+                    </div>
+                    <div class="label">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" name="password" type="password" placeholder="At least 6 characters">
+                    </div>
+                    <div class="label">
+                        <label for="">Re-enter password</label>
+                    </div>
+                    <div class="input">
+                        <input autocomplete="off" type="password">
+                    </div>
+                    <div class="btn-container">
+                        <input type="submit" value="Create your account">
+                    </div>
+                </form>
+            </div>
+            <div class="Policy">
+                <div>
+                    <p style="font-size: 15px;">By creating an account you agree with save contacts’ conditions of use and privacy notice </p>
+                </div>
+                <div style="width: 80%;">
+                    <hr >
+                </div>
+                <div>
+                    <p>Already have an account? <a href="">sign-In</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

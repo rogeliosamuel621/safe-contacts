@@ -8,7 +8,6 @@ class UserServices{
     }
 
     async Register(user, callback) {
-
         const hashedPassword = await bcryptjs.hash(user.password, 10);
         const newUser = {
             name: user.name,
@@ -16,7 +15,6 @@ class UserServices{
             email: user.email,
             username: user.username,
             password: hashedPassword,
-            rol: user.rol
         }
 
         this.MySQL.Create('Users', newUser, (userCreated) => {

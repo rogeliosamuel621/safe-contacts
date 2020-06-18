@@ -16,10 +16,7 @@ router.post('/signUp', (req, res) => {
     const newUser = req.body;
 
     userService.Register(newUser, (userCreated) => {
-        res.status(200).json({
-            message: 'you are registred',
-            data: userCreated
-        });
+        res.redirect('/SignIn');
     });
 });
 
@@ -31,10 +28,10 @@ router.post('/signIn', (req, res) => {
     const user = req.body;
 
     userService.LogIn(user, (token, message) => {
-        res.status(200).json({
-            token: token,
-            message: message
+        res.cookie('token', token, {
+            // maxAge: 900000
         });
+        res.redirect('/profile')
     });
 });
 

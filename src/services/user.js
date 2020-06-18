@@ -44,6 +44,16 @@ class UserServices{
         })
     }
 
+    GetMyInfo(token, callback) {
+        authJWT.verify(token, (decoded) => {
+            const { id } = decoded
+            this.MySQL.GetOne('users', 'id', id, (user) => {
+                callback(user);
+            })
+        });
+        
+    }
+
     ReadContacts() {
 
     }

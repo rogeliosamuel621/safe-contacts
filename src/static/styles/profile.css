@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: #204051;
+    display: flex;
+    justify-content: space-between;
+}
+main{
+    margin-top: 50px;
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-columns: 400px auto;
+}
+.Profile{
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 210px 30px 50px 50px;
+}
+.edit{
+    border: 1px solid #0779E4;
+    border-radius: 5px;
+    height: 30px;
+}
+.edit a{
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px 0 30px;
+    text-decoration: none;
+    color: #0779E4;
+}
+.edit a:hover{
+    transition: 0.3s;
+    background-color: #0779E4;
+    color: white;
+}
+.Cathegories{
+    display: flex;
+}
+.Cathegories a{
+    border-bottom: 2px solid white;
+    height: 50px;
+    text-align: center;
+    width: 33.33%;
+    text-decoration: none;
+    color: black;
+}
+.Cathegories a:hover{
+    transition: 0.3s;
+    border-bottom: 2px solid #0779E4;
+}
+.Contacts{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.Contacts div{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 10px;
+}
+.Contacts div a{
+    text-decoration: none;
+    color: #0779E4;
+}

@@ -3,13 +3,13 @@ const { secret_token } = require('../../config');
 
 const authJWT = {
     sign(payload, callback) {
-        jwt.sign(payload, secret_token, { expiresIn: '15m' }, (err, token) => {
+        jwt.sign(payload, secret_token, (err, token) => {
             if(err) {
                 return console.log(err)
             }
 
             callback(token);
-        })
+        });
     },  
 
     verify(token, callback) {

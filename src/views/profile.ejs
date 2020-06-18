@@ -3,31 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/profile.css">
     <title>Profile</title>
 </head>
 <body>
-    <%=data[0].name%>
     <nav>
-        <div class="Search">
-
+        <div class="Logo">
+            <h1 style="font-family: 'Merienda One', cursive; color: white; margin-left: 30px;">Safe Contacts</h1>
         </div>
-        <div class="Plus">
-
+        <div class="Plus" style="display: flex; align-items: center; margin-right: 30px;">
+            <a href=""><img src="/img/plus.svg" alt="plus" width="30px" height="30px"></a>
         </div>
     </nav>
-    <aside class="Profile">
-        <div></div>
-        <div></div>
-        <div></div>
-    </aside>
-    <section class="Content">
-        <div class="Navigate">
-
-        </div>
-        <div class="Contacts">
-
-        </div>
-    </section>
+    <main>
+        <aside class="Profile">
+            <div>
+                <img src="/img/user.svg" alt="" width="200px" height="200px">
+            </div>
+            <div>
+                <p><%=data[0].username%></p>
+            </div>
+            <div>
+                <p><%=data[0].email%></p>
+            </div>
+            <div class="edit">
+                <a href="">Editar perfil</a>
+            </div>
+        </aside>
+        <section class="Content">
+            <div class="Navigate">
+                <div class="Cathegories">
+                    <a href=""><h2 style="margin: 0;">Profile</h2></a>
+                    <a href=""><h2 style="margin: 0;">Contacts</h2></a>
+                    <a href=""><h2 style="margin: 0;">Settings</h2></a>
+                </div>
+            </div>
+            <div class="Contacts">
+                <div>
+                    <a href="" style="width: auto;"><h3>Oscar Barajas</h3></a>
+                    <p><strong>Telefono</strong>: 6677859725</p>
+                    <p><strong>Email</strong>: rogeliosamuel621@gmail.com</p>
+                </div>
+                <div>
+                    <a href=""><h3>Oscar Barajas</h3></a>
+                    <p><strong>Telefono</strong>: 6677859725</p>
+                    <p><strong>Email</strong>: rogeliosamuel621@gmail.com</p>   
+                </div>
+                <div>
+                    <a href=""><h3>Oscar Barajas</h3></a>
+                    <p><strong>Telefono</strong>: 6677859725</p>
+                    <p><strong>Email</strong>: rogeliosamuel621@gmail.com</p>
+                </div>
+                <div>
+                    <a href=""><h3>Oscar Barajas</h3></a>
+                    <p><strong>Telefono</strong>: 6677859725</p>
+                    <p><strong>Email</strong>: rogeliosamuel621@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

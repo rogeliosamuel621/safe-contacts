@@ -48,10 +48,10 @@
                             <div class="btn">
                                 <button id="btn<%=i%>"+ ><img src="/img/menu.svg"  data-btn="btn<%=i%>" alt="" width="100%" height="20px"></button>
                                 <div class="Options hide" id="Delete<%=i%>">
-                                    <a href=""><img src="/img/Delete.svg" alt="" width="20px" height="20px"></a>
+                                    <a href="/profile/delete/<%=data[i].id%>"><img src="/img/Delete.svg" alt="" width="20px" height="20px"></a>
                                 </div>
                                 <div class="Options hide" id="Edit<%=i%>">
-                                    <a href=""><img src="/img/Edit.svg" width="20px" height="20px" alt=""></a>
+                                    <a href="/profile/edit/<%=data[i].id%>"><img src="/img/Edit.svg" width="20px" height="20px" alt=""></a>
                                 </div>
                             </div>
                         </div>

@@ -6,7 +6,6 @@ const userService = new UserServices();
 router.get('/', (req, res) => {
     const { token } = req.cookies;
     userService.GetMyInfo(token, (contacts, name) => {
-        console.log(contacts, name)
         res.render('profile', { data: contacts, name: name});
     });
 });
@@ -17,6 +16,13 @@ router.post('/AddContact', (req, res) => {
     userService.CreateContacts(token, contact, (contactCreated)=> {
         res.send(contactCreated);
     });
-})
+});
+
+router.get('/delete/:contactId', (req, res) => {
+    const { contactId } = req.params;
+    userService.DeleteContacts(contactId, (contactDeleted) => {
+        res.redirect('/profile');
+    })
+});
 
 module.exports = router;

@@ -80,8 +80,10 @@ class UserServices{
 
     }
 
-    DeleteContacts() {
-
+    DeleteContacts(id, callback) {
+        this.MySQL.Delete('contacts', 'id', id, (contactDelete) => {
+            callback(contactDelete);
+        });
     }
 }
 

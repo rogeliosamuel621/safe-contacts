@@ -48,8 +48,8 @@ class UserServices{
     GetMyInfo(token, callback) {
         authJWT.verify(token, (decoded) => {
             const { id } = decoded
-            this.MySQL.GetOne('users', 'id', id, (user) => {
-                callback(user);
+            this.MySQL.GetOne('contacts', 'user_id', id, (contacts) => {
+                callback(contacts, decoded.name);
             })
         });
         

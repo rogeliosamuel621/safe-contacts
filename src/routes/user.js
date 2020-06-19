@@ -5,8 +5,9 @@ const userService = new UserServices();
 
 router.get('/', (req, res) => {
     const { token } = req.cookies;
-    userService.GetMyInfo(token, (user) => {
-        res.render('profile', { data: user });
+    userService.GetMyInfo(token, (contacts, name) => {
+        console.log(contacts, name)
+        res.render('profile', { data: contacts, name: name});
     });
 });
 

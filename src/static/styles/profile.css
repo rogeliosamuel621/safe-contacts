@@ -57,7 +57,9 @@ main{
     display: grid;
     grid-template-columns: auto auto;
 }
-.Contacts div{
+.Card{
+    display: grid;
+    grid-template-columns: auto 40px;
     padding: 10px;
     margin: 10px;
     border: 1px solid rgb(211, 211, 211);
@@ -66,4 +68,28 @@ main{
 .Contacts div a{
     text-decoration: none;
     color: #0779E4;
+}
+.Card div a h3{
+    margin: 0;
+}
+.btn button{
+    padding: 0;
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.btn button img:hover{
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: rgb(236, 236, 236);
+}
+.Options{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.hide{
+    display: none;
 }

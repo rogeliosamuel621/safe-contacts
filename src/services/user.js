@@ -29,6 +29,7 @@ class UserServices{
                 if(await bcryptjs.compare(password, user[0].password)) {
                     const payload = {
                         id: user[0].id,
+                        name: user[0].username,
                         rol: user[0].rol
                     }
 
@@ -58,8 +59,21 @@ class UserServices{
 
     }
 
-    CreateContacts() {
-
+    CreateContacts(token, data, callback) {
+        const { name, lastName, tel, email  } = data;
+        authJWT.verify(token, (decoded) => {
+            const { id } = decoded;
+            const newContact = {
+                name,
+                lastName,
+                tel,
+                email,
+                user_id: id
+            }
+            this.MySQL.Create('contacts', newContact, (contact) => {
+                callback(contact);
+            });
+        })
     }
 
     UpdateContacts() {

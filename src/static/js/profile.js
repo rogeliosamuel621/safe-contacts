@@ -11,7 +11,6 @@ btn4.addEventListener('click', show);
 
 function show(ev) {
     var button = ev.target.dataset.btn;
-    console.log(ev.target)
 
     switch(button) {
         case 'btn1': 

@@ -28,6 +28,7 @@ router.post('/signIn', (req, res) => {
     const user = req.body;
 
     userService.LogIn(user, (token, message) => {
+        console.log(message)
         res.cookie('token', token, {
             // maxAge: 900000
         });

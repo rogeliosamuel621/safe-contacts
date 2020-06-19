@@ -13,7 +13,7 @@
             <h1 style="font-family: 'Merienda One', cursive; color: white; margin-left: 30px;">Safe Contacts</h1>
         </div>
         <div class="Plus" style="display: flex; align-items: center; margin-right: 30px;">
-            <a href=""><img src="/img/plus.svg" alt="plus" width="30px" height="30px"></a>
+            <a href="/profile/addContact"><img src="/img/plus.svg" alt="plus" width="30px" height="30px"></a>
         </div>
     </nav>
     <main>
@@ -25,7 +25,7 @@
                 <p><%=name%></p>
             </div>
             <div class="edit">
-                <a href="">Editar perfil</a>
+                <a href="/profile/edit">Editar perfil</a>
             </div>
         </aside>
         <section class="Content">
@@ -56,6 +56,10 @@
                             </div>
                         </div>
                     <%}%>
+                <%} else {%>
+                    <div class="messageNoContacts">
+                        <h3>Agrega contactos para que puedas visualizarlos</h3>
+                    </div>
                 <%}%>
             </div>
         </section>

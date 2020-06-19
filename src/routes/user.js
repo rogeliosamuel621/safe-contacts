@@ -10,17 +10,20 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/AddContact', (req, res) => {
+router.get('/addContact', (req, res) => {
+    res.render('addContact')
+})
+router.post('/addContact', (req, res) => {
     const contact = req.body;
     const { token } = req.cookies;
     userService.CreateContacts(token, contact, (contactCreated)=> {
-        res.send(contactCreated);
+        res.redirect('/profile')
     });
 });
 
 router.get('/delete/:contactId', (req, res) => {
     const { contactId } = req.params;
-    userService.DeleteContacts(contactId, (contactDeleted) => {
+    userService.DeleteContacts(contactId, () => {
         res.redirect('/profile');
     })
 });

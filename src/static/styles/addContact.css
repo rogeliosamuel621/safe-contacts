@@ -1,0 +1,86 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 100px 200px 300px;
+    grid-template-columns: auto auto auto auto;
+}
+nav{
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    background-color: #204051;
+}
+nav h1{
+    font-family: 'Merienda One', cursive;
+    color: white;
+    margin-left: 20px;
+}
+nav a{
+    text-decoration: none;
+}
+.background1{
+    background-color: #204051;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.background2{
+    background-color: #204051;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+main{
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    background-color: white;    
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-rows: 100px;
+}
+main div h1{
+    margin-left: 20px;
+    font-weight: 400;
+}
+.form-container{
+    margin-bottom: 20px;
+}
+form{
+    height: 100%;
+    display: grid;
+    justify-items: center;
+}
+.label{
+    margin-bottom: 5px;
+    width: 60%;
+    text-align: start;
+    align-self: end;
+}
+.input{
+    width: 60%;
+}
+.input input{
+    border-radius: 3px;
+    border: 1px solid gray;
+    outline: none;
+    width: 90%;
+    height: 25px;
+}
+.input input:focus{
+    border: 1px solid #0779E4;
+    box-shadow: 0 0 2px 0 #0779E4;
+}
+.btn-container{
+    margin-top: 30px;
+    width: 60%;
+}
+.btn-container input{
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #0779E4;
+    background-color: #0779E4;
+    height: 30px;
+    outline: none;
+    width: 93%;
+}

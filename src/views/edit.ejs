@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/addContact.css">
+    <title>Agregar contacto</title>
+</head>
+<body>
+    <nav>
+        <a href="/profile"><h1>Safe Contacts</h1></a>
+    </nav>
+    <div class="background1"></div>
+    <div class="background2"></div>
+    <main>
+        <div>
+            <h1>Add contact</h1>
+        </div>
+        <div class="form-container">
+            <form action="/profile/edit/<%= data[0].id %>" method="POST">
+                <div class="label">
+                    <label for="name">First name</label>
+                </div>
+                <div class="input">
+                    <input autocomplete="off" name="name" type="text" value="<%= data[0].name %>">
+                </div>
+                <div class="label">
+                    <label for="">Last name</label>
+                </div>
+                <div class="input">
+                    <input autocomplete="off" name="lastName" type="text" value="<%= data[0].lastName %>">
+                </div>
+                <div class="label">
+                    <label for="">Telefono</label>
+                </div>
+                <div class="input">
+                    <input autocomplete="off" name="tel" type="text" value="<%= data[0].tel %>">
+                </div>
+                <div class="label">
+                    <label for="">Email</label>
+                </div>
+                <div class="input">
+                    <input autocomplete="off" name="email" type="text" value="<%= data[0].email %>">
+                </div>
+                <div class="btn-container">
+                    <input type="submit" value="Edit">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

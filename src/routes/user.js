@@ -28,4 +28,19 @@ router.get('/delete/:contactId', (req, res) => {
     })
 });
 
+router.get('/edit/:contactId', (req, res) => {
+    const { contactId } = req.params;
+    userService.getContactInfo(contactId, (contact) => {
+        res.render('edit', { data: contact });
+    });
+});
+
+router.post('/edit/:contactId', (req, res) => {
+    const { contactId } = req.params;
+    const contact = req.body;
+    userService.UpdateContacts(contactId, contact, (contactUpdated) => {
+        res.redirect('/profile');
+    })
+})
+
 module.exports = router;

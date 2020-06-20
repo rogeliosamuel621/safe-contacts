@@ -76,8 +76,16 @@ class UserServices{
         })
     }
 
-    UpdateContacts() {
+    getContactInfo(contactId, callback) {
+        this.MySQL.GetOne('contacts', 'id', contactId, (contact) => {
+            callback(contact);
+        })
+    }
 
+    UpdateContacts(id, Contact, callback) {
+        this.MySQL.Update('contacts', 'id', Contact, id, (contactUpdated) => {
+            callback(contactUpdated);
+        })
     }
 
     DeleteContacts(id, callback) {

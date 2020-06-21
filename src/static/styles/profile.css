@@ -41,7 +41,7 @@ main{
     display: flex;
 }
 .Cathegories a{
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #ffffff;
     height: 50px;
     text-align: center;
     width: 33.33%;
@@ -50,7 +50,7 @@ main{
 }
 .Cathegories a:hover{
     transition: 0.3s;
-    border-bottom: 2px solid #0779E4;
+    border-bottom: 2px solid #d4d4d4;
 }
 .Contacts{
     margin-top: 50px;

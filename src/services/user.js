@@ -45,13 +45,11 @@ class UserServices{
         })
     }
 
-    GetMyInfo(token, callback) {
-        authJWT.verify(token, (decoded) => {
-            const { id } = decoded
+    GetMyInfo(id, callback) {
+
             this.MySQL.GetOne('contacts', 'user_id', id, (contacts) => {
-                callback(contacts, decoded.name);
+                callback(contacts);
             })
-        });
         
     }
 
@@ -59,21 +57,18 @@ class UserServices{
 
     }
 
-    CreateContacts(token, data, callback) {
+    CreateContacts(id, data, callback) {
         const { name, lastName, tel, email  } = data;
-        authJWT.verify(token, (decoded) => {
-            const { id } = decoded;
-            const newContact = {
-                name,
-                lastName,
-                tel,
-                email,
-                user_id: id
-            }
-            this.MySQL.Create('contacts', newContact, (contact) => {
-                callback(contact);
-            });
-        })
+        const newContact = {
+            name,
+            lastName,
+            tel,
+            email,
+            user_id: id
+        }
+        this.MySQL.Create('contacts', newContact, () => {
+            callback();
+        });
     }
 
     getContactInfo(contactId, callback) {
@@ -83,8 +78,8 @@ class UserServices{
     }
 
     UpdateContacts(id, Contact, callback) {
-        this.MySQL.Update('contacts', 'id', Contact, id, (contactUpdated) => {
-            callback(contactUpdated);
+        this.MySQL.Update('contacts', 'id', Contact, id, () => {
+            callback();
         })
     }
 

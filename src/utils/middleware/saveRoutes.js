@@ -1,13 +1,28 @@
-const auth = require('../auth/authJWT');
+const mysqlActions = require('../../lib/MySQL');
+const MySQL = new mysqlActions();
 const express = require('express');
+const authJWT = require('../auth/authJWT');
 const saveRoutes = express.Router();
 
 saveRoutes.use((req, res, next) => {
     const { token } = req.cookies;
 
     if(token) {
-        next();
+
+        authJWT.verify(token, (decoded) => {
+            MySQL.GetOne('users', 'id', decoded.id, (user) => {
+                if(user.length === 1) {
+                    console.log('sí hay usuario to´cool');
+                    req.decoded = decoded;
+                    next();
+                } else {
+                    res.redirect('/');
+                }
+            });
+        });
     } else {
         res.redirect('/');
     }
 });
+
+module.exports = saveRoutes;

@@ -45,12 +45,18 @@ class UserServices{
         })
     }
 
-    GetMyInfo(id, callback) {
+    GetMyInfo(id, table, condition, callback) {
 
-            this.MySQL.GetOne('contacts', 'user_id', id, (contacts) => {
-                callback(contacts);
-            })
+        this.MySQL.GetOne(table, condition, id, (myInfo) => {
+            callback(myInfo);
+        });
         
+    }
+
+    updateMyInfo(id, data, callback) {
+        this.MySQL.Update('users', 'id', data, id, () => {
+            callback();
+        })
     }
 
     ReadContacts() {

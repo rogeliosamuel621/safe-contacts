@@ -12,7 +12,6 @@ saveRoutes.use((req, res, next) => {
         authJWT.verify(token, (decoded) => {
             MySQL.GetOne('users', 'id', decoded.id, (user) => {
                 if(user.length === 1) {
-                    console.log('sí hay usuario to´cool');
                     req.decoded = decoded;
                     next();
                 } else {

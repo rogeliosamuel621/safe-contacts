@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const { body } = require('express-validator');
+const schema = require('../utils/middleware/shema');
 const UserServices = require('../services/user');
 const userService = new UserServices();
 
@@ -24,7 +26,7 @@ router.get('/signIn', (req, res) => {
     res.render('signIn')
 });
 
-router.post('/signIn', (req, res) => {
+router.post('/signIn', [body('email').isEmail()], schema, (req, res) => {
     const user = req.body;
 
     userService.LogIn(user, (token, message) => {

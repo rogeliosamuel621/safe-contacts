@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 //MIDDLEWARES
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));//To read form information
-app.use(cookieParser())
+app.use(cookieParser());
 
 //ROUTES
 const mainRoutes = require('./routes/main');

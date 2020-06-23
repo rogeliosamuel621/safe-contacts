@@ -19,8 +19,9 @@ const authJWT = {
             }
 
             callback(decoded)
-        })
+        });
     }
+    
 }
 
 module.exports = authJWT;

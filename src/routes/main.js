@@ -6,7 +6,7 @@ const UserServices = require('../services/user');
 const userService = new UserServices();
 
 router.get('/', (req, res) => {
-    res.render('main')
+    res.render('main');
 });
 
 router.get('/signUp', (req, res) => {
@@ -23,18 +23,22 @@ router.post('/signUp', (req, res) => {
 });
 
 router.get('/signIn', (req, res) => {
-    res.render('signIn')
+    res.render('signIn', { message: null });
 });
 
 router.post('/signIn', [body('email').isEmail()], schema, (req, res) => {
     const user = req.body;
 
     userService.LogIn(user, (token, message) => {
+        if(!token) {
+            res.render('signIn', { message: message });
+            return
+        }
         console.log(message)
         res.cookie('token', token, {
             // maxAge: 900000
         });
-        res.redirect('/profile')
+        res.redirect('/profile');
     });
 });
 

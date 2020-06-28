@@ -37,10 +37,10 @@ class UserServices{
                         callback(token, 'succes');
                     });
                 } else {
-                    callback(null, 'wrong password');
+                    callback(null, 'el email o la contraseña son incorrectos');
                 }
             } else {
-                callback(null, 'None users');
+                callback(null, 'el email o la contraseña son incorrectos');
             }
         })
     }

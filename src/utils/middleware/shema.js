@@ -6,8 +6,9 @@ schema.use((req, res, next) => {
     const errors = validationResult(req);
 
     if(!errors.isEmpty()) {
-        console.log('err');
-        return res.status(422).json({erorrs: errors.array() });
+        console.log('err in schema', errors.array);
+        res.render('signIn', { message: 'El formato de los datos no es el correcto' });
+        return
     }
 
     req.user = {

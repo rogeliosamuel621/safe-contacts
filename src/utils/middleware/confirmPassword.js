@@ -6,6 +6,8 @@ confirmPassword.use((req, res, next) => {
     if(password === confirmPassword) {
         next();
     } else {
-        res.redirect('/SignUp');
+        res.render('signUp', { message: 'Las contraseñas deben de coincidir' });
     }
 });
+
+module.exports = confirmPassword;

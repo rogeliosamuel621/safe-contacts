@@ -8,6 +8,11 @@
     <title>Document</title>
 </head>
 <body>
+    <%if(message) {%>
+        <div class="message">
+            <%=message%>
+        </div>
+    <%}%>
     <main>
         <a href="/" style="text-decoration: none; color: black;"><h1 style="font-family: 'Merienda One', cursive;">Safe contacts</h1></a>
         <div class="Container-father">
@@ -20,37 +25,37 @@
                         <label for="name">First name</label>
                     </div>
                     <div class="input">
-                        <input autocomplete="off" name="name" type="text">
+                        <input autocomplete="off" required name="name" type="text">
                     </div>
                     <div class="label">
                         <label for="">Last name</label>
                     </div>
                     <div class="input">
-                        <input autocomplete="off" name="lastName" type="text">
+                        <input autocomplete="off" required name="lastName" type="text">
                     </div>
                     <div class="label">
                         <label for="">Email</label>
                     </div>
                     <div class="input">
-                        <input autocomplete="off" name="email" type="text">
+                        <input autocomplete="off" required name="email" type="text">
                     </div>
                     <div class="label">
                         <label for="">Username</label>
                     </div>
                     <div class="input">
-                        <input autocomplete="off" name="username" type="text">
+                        <input autocomplete="off" required name="username" type="text">
                     </div>
                     <div class="label">
                         <label for="">Password</label>
                     </div>
                     <div class="input">
-                        <input autocomplete="off" name="password" type="password" placeholder="At least 6 characters">
+                        <input autocomplete="off" required name="password" type="password" placeholder="At least 6 characters">
                     </div>
                     <div class="label">
                         <label for="">Re-enter password</label>
                     </div>
                     <div class="input">
-                        <input autocomplete="off" type="password">
+                        <input autocomplete="off" required type="password">
                     </div>
                     <div class="btn-container">
                         <input type="submit" value="Create your account">

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { body } = require('express-validator');
 const schema = require('../utils/middleware/shema');
+const verifyUsers = require('../utils/middleware/verifyUsers');
 const UserServices = require('../services/user');
 const userService = new UserServices();
 
@@ -10,10 +11,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/signUp', (req, res) => {
-    res.render('signUp');
+    res.render('signUp', { message: null });
 });
 
-router.post('/signUp', (req, res) => {
+router.post('/signUp', verifyUsers, (req, res) => {
     
     const newUser = req.body;
 

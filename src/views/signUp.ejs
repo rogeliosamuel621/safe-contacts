@@ -9,8 +9,10 @@
 </head>
 <body>
     <%if(message) {%>
-        <div class="message">
-            <%=message%>
+        <div class="message" id="messageContainer">
+            <p><a href="#">Help</a></p>
+            <p><%=message%></p>
+            <button onclick="hide()">X</button>    
         </div>
     <%}%>
     <main>
@@ -75,5 +77,6 @@
             </div>
         </div>
     </main>
+    <script src="/js/hideMessage.js"></script>
 </body>
 </html>

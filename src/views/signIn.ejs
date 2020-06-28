@@ -10,8 +10,10 @@
 <body>
     <main>
         <%if(message) {%>
-            <div class="message">
-                <%=message%>
+            <div class="message" id="messageContainer">
+                <p><a href="#">Help</a></p>
+                <p><%=message%></p>
+                <button onclick="hide()">X</button>    
             </div>
         <%}%>
         <a href="/" style="text-decoration: none; color: black;"><h1 style="font-family: 'Merienda One', cursive;">Safe contacts</h1></a>
@@ -51,5 +53,6 @@
             </div>
         </div>
     </main>
+    <script src="/js/hideMessage.js"></script>
 </body>
 </html>

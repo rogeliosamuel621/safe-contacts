@@ -16,6 +16,13 @@
             <a href="/profile/addContact"><img src="/img/plus.svg" alt="plus" width="30px" height="30px"></a>
         </div>
     </nav>
+    <%if(message) {%>
+        <div class="message" id="messageContainer">
+            <p><a href="#">Help</a></p>
+            <p><%=message%></p>
+            <button onclick="hide()">X</button>    
+        </div>
+    <%}%>
     <main>
         <aside class="Profile">
             <div>
@@ -38,7 +45,7 @@
             </div>
             <div class="Contacts">
                 <%if(data.length > 0) {%>
-                    <%for(let i=0; i < data.length; i++) {%>
+                    <%for(let i=0; i < 4; i++) {%>
                         <div class="Card">
                             <div>
                                 <a href=""><h3><%=data[i].name%> <%=data[i].lastName%></h3></a>
@@ -65,5 +72,6 @@
         </section>
     </main>
     <script src="/js/profile.js"></script>
+    <script src="/js/hideMessage.js"></script>
 </body>
 </html>

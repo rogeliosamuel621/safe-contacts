@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const UserServices = require('../services/user');
 const saveRoutes = require('../utils/middleware/saveRoutes');
-const { route } = require('../utils/middleware/saveRoutes');
 const userService = new UserServices();
 
 //Profile
@@ -10,7 +9,7 @@ router.get('/', saveRoutes, (req, res) => {
     const { id } = req.decoded;
     const { name } = req.decoded;
     userService.GetMyInfo(id, 'contacts', 'user_id', (contacts) => {
-        res.render('profile', { data: contacts, name: name});
+        res.render('profile', { data: contacts, name: name, message: null});
     });
 });
 
@@ -64,4 +63,5 @@ router.post('/editMyProfile', saveRoutes, (req, res) => {
         res.redirect('/profile');
     });
 });
+
 module.exports = router;

@@ -38,7 +38,8 @@ router.post('/signIn', [body('email').isEmail()], schema, (req, res) => {
         }
         console.log(message)
         res.cookie('token', token, {
-            // maxAge: 900000
+            maxAge: 900000,
+            httpOnly: true
         });
         res.redirect('/profile');
     });
